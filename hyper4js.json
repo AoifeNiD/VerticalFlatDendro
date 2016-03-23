@@ -1,0 +1,254 @@
+{
+  "name": "My Space Profile",
+  "icon": "images/circleheart.png",
+  "icon2": "images/circle_plus.png",
+  "level": "red",
+  "children": [
+    {
+      "name":  "Extraterrestrial Life",
+      "icon": "images/circleheart.png",
+      "icon2": "images/circle_plus.png",
+      "level": "red",
+      "url": "https://en.wikipedia.org/wiki/Extraterrestrial_life",
+      "children": [
+        {"name":"Astrobiology",
+          "icon": "images/circleheart.png",
+          "level": "red",
+          "url":  "https://en.wikipedia.org/wiki/Astrobiology"},
+        {
+          "name":"Extraterrestrial Beings",
+          "url": "https://en.wikipedia.org/wiki/List_of_alleged_extraterrestrial_beings",
+          "icon": "images/circleheart.png",
+          "icon2": "images/circle_plus.png",
+          "level": "red",
+          "children": [
+            {"name": "Grey Aliens",
+              "icon": "images/circleheart.png",
+              "level": "red",
+              "url": "https://en.wikipedia.org/wiki/Grey_alien"},
+            {"name": "Nordic Aliens",
+              "icon": "images/circleheart.png",
+              "level": "red",
+              "url": "https://en.wikipedia.org/wiki/Plejaren"},
+            {"name": "Anunnaki",
+              "icon": "images/circleheart.png",
+              "level": "red",
+              "url": "https://en.wikipedia.org/wiki/Anunnaki"},
+            {"name": "Reptilians",
+              "icon": "images/circleheart.png",
+              "level": "red",
+              "url": "https://en.wikipedia.org/wiki/Reptilians"},
+            {"name": "Little Green Men",
+              "icon": "images/circleheart.png",
+              "level": "red",
+              "url": "https://en.wikipedia.org/wiki/Little_green_men"}
+          ]
+        }
+      ]
+    },{
+      "name": "Solar System",
+      "icon": "images/square.svg",
+      "icon2": "images/circle_plus.png",
+      "level": "blue",
+      "url": "https://en.wikipedia.org/wiki/Solar_System",
+      "children": [
+        {
+          "name": "Terrestrial Planets",
+          "url": "https://en.wikipedia.org/wiki/Planet",
+          "icon": "images/square.svg",
+          "icon2": "images/circle_plus.png",
+          "level": "blue",
+          "children": [
+            {"name": "Mercury",
+              "icon": "images/square.svg",
+              "level": "blue",
+              "url": "https://en.wikipedia.org/wiki/Mercury_(planet)"
+            },{
+              "name": "Venus",
+              "icon": "images/square.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "blue",
+              "url": "https://en.wikipedia.org/wiki/Venus",
+              "children": [
+                {"name": "Venusians",
+                  "icon": "images/square.svg",
+                  "level": "blue",
+                  "url": "https://en.wikipedia.org/wiki/Venusians"}
+              ]
+            },{
+              "name": "Earth",
+              "icon": "images/square.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "blue",
+              "url": "https://en.wikipedia.org/wiki/Earth",
+              "children": [
+                {"name": "Humans",
+                  "icon": "images/square.svg",
+                  "level": "blue",
+                  "url": "https://en.wikipedia.org/wiki/Human"}
+              ]
+            },{
+              "name": "Mars",
+              "icon": "images/square.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "blue",
+              "url": "https://de.wikipedia.org/wiki/Mars_(Planet)",
+              "children": [
+                {"name": "Martians",
+                  "icon": "images/square.svg",
+                  "level": "blue",
+                  "url": "https://en.wikipedia.org/wiki/Martian"}
+              ]
+            }
+          ]
+        },
+        {"name": "Giant Planets",
+          "icon": "images/square.svg",
+          "icon2": "images/circle_plus.png",
+          "level": "green",
+          "url": "https://en.wikipedia.org/wiki/Giant_planet",
+          "children": [
+            {"name": "Gas Giants",
+              "icon": "images/square.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "green",
+              "url": "https://en.wikipedia.org/wiki/Gas_giant",
+              "children": [
+                {"name": "Jupiter",
+                  "icon": "images/square.svg",
+                  "level": "green",
+                  "url": "https://en.wikipedia.org/wiki/Jupiter"},
+                {"name": "Saturn",
+                  "icon": "images/square.svg",
+                  "level": "green",
+                  "url": "https://en.wikipedia.org/wiki/Saturn"}
+              ]
+            },
+            {"name": "Ice Giants",
+              "icon": "images/square.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "green",
+              "url": "https://en.wikipedia.org/wiki/Ice_giant",
+              "children": [
+                {"name": "Uranus",
+                  "icon": "images/square.svg",
+                  "level": "green",
+                  "url": "https://en.wikipedia.org/wiki/Uranus"},
+                {"name": "Neptune",
+                  "icon": "images/square.svg",
+                  "level": "green",
+                  "url": "https://en.wikipedia.org/wiki/Neptune"}
+              ]
+            }
+          ]
+        }
+      ]
+    },{
+      "name": "Universe",
+      "icon": "images/star.svg",
+      "icon2": "images/circle_plus.png",
+      "level": "orange",
+      "url": "https://en.wikipedia.org/wiki/Universe",
+      "children": [
+        {"name": "Chronology",
+          "icon": "images/star.svg",
+          "icon2": "images/circle_plus.png",
+          "level": "orange",
+          "url": "https://en.wikipedia.org/wiki/Chronology_of_the_universe",
+          "children": [
+            {"name": "The Big Bang",
+              "icon": "images/star.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "orange",
+              "url": "https://en.wikipedia.org/wiki/Big_Bang",
+              "children": [
+                {"name": "Singularity",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Gravitational_singularity"
+                },
+                {"name": "Infinity",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Infinity"
+                }
+              ]
+            },
+            {"name": "Creation Myth",
+              "icon": "images/star.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "orange",
+              "url": "https://en.wikipedia.org/wiki/Creation_myth",
+              "children": [
+                {"name": "Ex nihilo",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Ex_nihilo"},
+                {"name": "Creation from Chaos",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Chaos_(cosmogony)"},
+                {"name": "World Parent",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Mother_goddess#Earth_Mother"},
+                {"name": "Emergence",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Metamorphosis"},
+                {"name": "Earth Diver",
+                  "icon": "images/star.svg",
+                  "level": "orange",
+                  "url": "https://en.wikipedia.org/wiki/Mythologies_of_the_indigenous_peoples_of_the_Americas"}
+              ]
+            }
+          ]
+        },
+        {"name": "Components",
+          "icon": "images/star.svg",
+          "icon2": "images/circle_plus.png",
+          "level": "yellow",
+          "url": "https://en.wikipedia.org/wiki/Universe#Contents",
+          "children": [
+            {"name": "Dark Energy",
+              "icon": "images/star.svg",
+              "level": "yellow",
+              "url": "https://en.wikipedia.org/wiki/Dark_energy"},
+            {"name": "Ordinary Matter",
+              "icon": "images/star.svg",
+              "icon2": "images/circle_plus.png",
+              "level": "yellow",
+              "url": "https://en.wikipedia.org/wiki/Matter",
+              "children": [
+                {"name": "Particles",
+                  "icon": "images/star.svg",
+                  "icon2": "images/circle_plus.png",
+                  "level": "yellow",
+                  "url": "https://en.wikipedia.org/wiki/Particle_physics",
+                  "children": [
+                    {"name": "Hadrons",
+                      "icon": "images/star.svg",
+                      "level": "magenta",
+                      "url": "https://en.wikipedia.org/wiki/Hadron"},
+                    {"name": "Leptons",
+                      "icon": "images/star.svg",
+                      "level": "magenta",
+                      "url": "https://en.wikipedia.org/wiki/Lepton"},
+                    {"name": "Photons",
+                      "icon": "images/star.svg",
+                      "level": "magenta",
+                      "url": "https://en.wikipedia.org/wiki/Photon_epoch"}
+                  ]
+                }
+              ]
+            },
+            {"name": "Dark Matter",
+              "icon": "images/star.svg",
+              "level": "yellow",
+              "url": "https://en.wikipedia.org/wiki/Dark_matter"}
+          ]}
+      ]
+    }
+  ]
+}
+

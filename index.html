@@ -1,0 +1,265 @@
+<!--******************************************************************************
+    This is the Stand Alone Dendrogram - it takes data from a JSON file and
+      displays it in a tree-like graph across the full screen of a desktop
+      (Mobile not supported).
+      Click on the icons to open the next branch of the Dendrogram, click
+      on the title text to open the lightbox containing an iframe to display URLs.
+********************************************************************************-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet">
+    <title>StandAloneDendro</title>
+</head>
+
+<body onclick ="div_hide()">
+<!-- Navigation -->
+<div id="dendronav">
+    <h1>Dendro Navigation</h1>
+    <button type="button">logout</button>
+</div>
+<!-- Navigation -->
+
+<div id="Dendro">
+    <script src="//d3js.org/d3.v3.min.js"></script> <!--Need this for the D3 engine -->
+
+    <!-- D3 Dendrogram example here: https://bl.ocks.org/mbostock/4339083
+    Modified to provide lightbox functionality on nodes on a click event.
+    This is the D3 Javascript code for the Dendrogram below -->
+    <script>
+        //you can set the margins, width and height of the canvas below
+
+        var margin = {top: 120, right: 5, bottom: 20, left: 50},
+                width = 1270 - margin.right - margin.left,
+                height = 1000 - margin.top - margin.bottom;
+        var i = 0,
+// Duration speeds up or slows down the transitions of the branches on click
+                duration = 750,
+                root;
+        // DO NOT CHANGE
+        var tree = d3.layout.tree()
+                .size([width, height]);
+
+        // DO NOT CHANGE
+        var diagonal = d3.svg.diagonal()
+                .projection(function(d) { return [d.x , d.y]; });
+
+        //you can append the svg to any element or id on the page - use d3.select("elementName").append("svg")
+        var svg = d3.select("body").append("svg")
+                .attr("width", width + margin.right + margin.left)
+                .attr("height", height + margin.top + margin.bottom)
+//This is where the main node "g" is created which holds the icon and text --- DO NOT CHANGE
+                .append("g")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        //Insert json file name inside "___" below to use your own data sets. Can also use csv, xml, text files - reference as d3.csv or d3.xml, etc.
+        d3.json("hyper4js.json", function(error, dendro) {
+            if (error) throw error;
+
+// Set the root to a panic-button-like back-up for errors (local JSON file in the HTML maybe)
+            root = dendro;
+// Sets the collapse transitions. DO NOT CHANGE ****************************
+            root.x0 = height / 2;
+            root.y0 = 0;
+
+// The collapse function
+            function collapse(d) {
+                if (d.children) {
+                    d._children = d.children;
+                    d._children.forEach(collapse);
+                    d.children = null;
+                }
+            }
+            root.children.forEach(collapse);
+            update(root);
+        });
+
+        d3.select(self.frameElement).style("height", "400px");
+        //**************************************************************************
+
+        //D3 starts to draw the svg from here -- DO NOT CHANGE
+        function update(source) {
+
+// Computes the new tree layout.
+            var nodes = tree.nodes(root).reverse(),
+                    links = tree.links(nodes);
+
+// Fixed-depth or length of branches can be changed in brackets below
+            nodes.forEach(function(d) { d.y = d.depth * 140; });
+
+
+// Update the nodes…DO NOT CHANGE
+            var node = svg.selectAll("g.node")
+                    .data(nodes, function(d) { return d.id || (d.id = ++i); });
+// ENTER any new nodes at the parent's previous position.
+            var nodeEnter = node.enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
+                    .on("mouseover", function(d) {
+                        var g = d3.select(this);      // The node is being selected here. The class is used to remove the additional text later
+                        var info = g.append('text')   //This is where you can add tooltips on mouse hover
+                                .classed('info', true)
+                                .attr('x', 20)
+                                .attr('y', 10)
+                                .text(''); //Insert text here
+                    })
+                    .on("mouseout", function() {
+                        d3.select(this).select('text.info').remove();// Remove the info text on mouse out.
+                    });
+
+            //RE-ADDITION -> 1 0F 4 FOR CIRCLE
+            nodeEnter.append("circle")
+                    .attr("r", 1e-6)
+                    .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+
+            // Add Icon to node
+            nodeEnter.append("image")
+                    .on("click", click)
+
+                //  .attr("xlink:href", function(d) { return d.icon; }) //where to retrieve icon URL in JSON
+
+                    .attr("xlink:href", function(d) { return  d._children ? d.icon2 : d.icon; })
+
+                    .attr("x", "-12px")
+                    .attr("y", "-12px")
+                    .attr("z", "1")
+                    .attr("width", "25px")
+                    .attr("height", "25px");
+            //////////////////////////////////////////////////////
+
+            //NEW ADDITION adds rectangle background to node text
+            nodeEnter.append("rect")
+                    .attr("width", "130px")
+                    .attr("height", "2%")
+
+                    .attr("x", function(d) { return  -140; })
+                    .attr("y", function(d) { return -23; })
+                    .attr("transform", "rotate(45)")
+                    .attr("fill", "rgba(255, 255, 255, 0.9")
+
+                    .attr("rx", "5")
+                    .attr ("ry", "5");
+
+
+
+            // Add text label and anchor tag for URL
+            nodeEnter.append("a")
+                    .attr("class", "show")//gives the class to the <a> for the div_show function in popup.js
+                    .attr("xlink:href", function(d) { return d.url; }) //returns the URL from the JSON
+                    .attr("target", "showurl")//sends the URL to the target ("self", "parent", "window" or "iframe name"
+                    .append("text")
+                //sets where to align the text label
+
+                    .attr("x", function(d) { return  -138; })
+                    .attr("y", function(d) { return  -13; })
+                    .attr("transform", "rotate(45)")
+
+                /////////////////////////////////////////
+                    .attr("dy", ".2em") //sets the text size
+                    .style("fill-opacity", 1e-6)
+                    .style("font-family", "Gadugi")
+                    .style("font-weight", "bold" )
+                    .text(function(d) {return d.name;});
+
+
+            // Transition nodes to their UPDATED position. DO NOT CHANGE
+            var nodeUpdate = node.transition()
+                    .duration(duration)
+                    .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+            nodeUpdate.select("text")
+                    .style("fill-opacity", 1);
+
+            //RE-ADDITION -> 2 0F 4 FOR CIRCLE
+            nodeUpdate.select("circle")
+                    .attr("r", 11)
+                    .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+            // Transition EXITING nodes to the parent's new position. DO NOT CHANGE
+            var nodeExit = node.exit().transition()
+                    .duration(duration)
+                    .attr("transform", function(d) { return "translate(" + source.x + "," + source.y + ")"; })
+                    .remove();
+
+            nodeExit.select("image")
+                    .style("fill-opacity", 1e-6);
+
+            //RE-ADDITION -> 3 OF 4 FOR CIRCLE
+            nodeExit.select("circle")
+                    .attr("r", 1e-6);
+
+            // Update the links…DO NOT CHANGE
+            var link = svg.selectAll("path.link")
+                    .data(links, function(d) { return d.target.id; })
+                    .style("stroke", function(d) { return d.target.level; });
+
+            // Enter any new links at the parent's previous position. DO NOT CHANGE
+            link.enter().insert("path", "g")
+                    .attr("class", "link")
+                    .attr("d", function(d) {
+                        var o = {x: source.x0, y: source.y0};
+                        return diagonal({source: o, target: o});
+                    });
+
+            // Transition links to their new position. DO NOT CHANGE
+            link.transition()
+                    .duration(duration)
+                    .attr("d", diagonal);
+
+            // Transition exiting nodes to the parent's new position. DO NOT CHANGE
+            link.exit().transition()
+                    .duration(duration)
+                    .attr("d", function(d) {
+                        var o = {x: source.x, y: source.y};
+                        return diagonal({source: o, target: o});
+                    })
+                    .remove();
+
+            // Stash the old positions for transition. DO NOT CHANGE
+            nodes.forEach(function(d) {
+                d.x0 = d.x;
+                d.y0 = d.y;
+            });
+        }
+
+        // Toggle children on click. DO NOT CHANGE
+        function click(d) {
+            if (d.children) {
+                d._children = d.children;
+                if(d._children._children) {
+                    for(var anything in d._children._children)
+                        collapse();
+                }
+                d.children = null;
+
+            } else {
+                d.children = d._children;
+                d._children = null;
+
+            }
+            update(d);
+        }
+    </script>
+
+</div>
+
+<!-- Popup Form-->
+<div id="abc">
+    <!-- Popup Div Starts Here-->
+    <div id="popupContact">
+        <!-- Contact Us Form-->
+        <div id="form">
+            <img id="close" src="images/close.png" onclick ="div_hide()">
+            <iframe name="showurl" ></iframe>
+        </div>
+    </div>
+    <!-- Popup Div Ends Here -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="popupjs.js" type="text/javascript"></script>
+</body>
+
+</html>

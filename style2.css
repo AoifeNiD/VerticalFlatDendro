@@ -1,0 +1,251 @@
+@import "http://fonts.googleapis.com/css?family=Raleway";
+
+/* DESKTOP */
+@media screen and (min-width: 1200px) and (min-height: 700px) {
+
+    /* General css */
+    body {
+
+        margin: -22px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        height: 800px;
+        width: 100%;
+        font-family: sans-serif;
+        background: floralwhite;
+    }
+    ul {
+        list-style-type: none;
+        text-align: left;
+    }
+    h1 {
+        width: 20%;
+        float: right;
+        margin-right: 2.5%;
+        color: white;
+
+    }
+    #dendronav {
+        background: -moz-linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96));
+        background: -webkit-linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96)); /* For Opera 11.1 to 12.0 */
+        background: linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96)); /* Standard syntax */
+        height: 7%;
+        margin: -22px 0px 0px -15px;
+        color: deepskyblue;
+        font-family: 'Raleway', sans-serif;
+        width: 100%;
+        padding: 3%;
+        position: fixed;
+    }
+    #dendronav h1{
+
+        width: 40%;
+
+
+        float: left;
+        margin-right: 2.5%;
+        margin-top: 2%;
+        color: white;
+    }
+    #dendronav button {
+        float: right;
+        width: 10%;
+        height: 40px;
+        text-decoration: none;
+        border-radius: 3px;
+        background-color: floralwhite;
+        color: rgb(0, 115, 153);
+        cursor: pointer;
+        padding: 4px;
+        margin-top: 2%;
+        margin-right: 3%;
+        border: 2px solid #ffc105;
+        font-size: .9em;
+        font-weight: 800;
+        font-family: 'Raleway', sans-serif;
+    }
+    #dendronav button:hover {
+        color: #fff;
+        background-color: #ffc105;
+        border: 2px solid #fff;
+    }
+
+
+    /* DENDRO CSS */
+
+    .node {
+        cursor: pointer;
+    }
+    /* RE-ADDITION -> 4 OF 4 FOR CIRCLE */
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1px;
+    }
+    .node text {
+        font: 12px sans-serif;
+    }
+    .link {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 2px;
+    }
+
+    svg{
+        margin-left: 200px;
+        margin-top: 8%;
+    }
+
+    /* Pop up CSS */
+    div#popupContact {
+        position:absolute;
+        left:41%;
+        top:18%;
+        margin-left:-502px;
+        font-family:'Raleway',sans-serif
+    }
+    #form {
+        max-width:1350px;
+        min-width:750px;
+        padding:10px;
+        border:2px solid gray;
+        border-radius:10px;
+        font-family: 'Raleway', sans-serif;
+        background-color:#fff
+    }
+    #form img{
+        float: right;
+        margin: 0;
+        height: 100px;
+        width:100px;
+    }
+    #abc{
+        display: none;
+    }
+    iframe{
+        height: 700px;
+        width: 1150px;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 1200px) and (min-height: 500px) {
+    /* General css */
+    body {
+
+        margin: -22px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        height: 100%;
+        width: 1000px;
+        font-family: sans-serif;
+        background: floralwhite;
+    }
+    ul {
+        list-style-type: none;
+        text-align: left;
+    }
+    h1 {
+        float: right;
+        margin-right: 2.5%;
+        margin-top: 3%;
+        color: white;
+    }
+    #dendronav {
+        background: -moz-linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96));
+        background: -webkit-linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96)); /* For Opera 11.1 to 12.0 */
+        background: linear-gradient(rgba(255,255,255,0.95),rgba(0,191,255, 0.96),rgba(0,115,153, 0.96)); /* Standard syntax */
+        height: 8%;
+        margin: -22px 0px 0px -15px;
+        color: deepskyblue;
+        font-family: 'Raleway', sans-serif;
+        width: 100%;
+        padding: 3%;
+        position: fixed;
+    }
+    #dendronav h1{
+        width: 35%;
+        float: left;
+        margin-right: 2.5%;
+        color: white;
+    }
+    #dendronav button {
+        float: right;
+        width: 15%;
+        height: 40px;
+        text-decoration: none;
+        border-radius: 3px;
+        background-color: floralwhite;
+        color: rgb(0, 115, 153);
+        cursor: pointer;
+        padding: 4px;
+        margin-top: 3%;
+        margin-right: 3%;
+        border: 2px solid #ffc105;
+        font-size: .9em;
+        font-weight: 800;
+        font-family: 'Raleway', sans-serif;
+    }
+    #dendronav button:hover {
+        color: #fff;
+        background-color: #ffc105;
+        border: 2px solid #fff;
+    }
+
+
+    /* DENDRO CSS */
+
+    .node {
+        cursor: pointer;
+    }
+    /* RE-ADDITION -> 4 OF 4 FOR CIRCLE */
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 1px;
+    }
+    .node text {
+        font: 12px sans-serif;
+    }
+    .link {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 2px;
+    }
+    svg{
+        margin-left: 2%;
+        margin-top: 15%;
+    }
+
+
+    /* Pop up CSS */
+    div#popupContact {
+        position:absolute;
+        left:55%;
+        top:17%;
+        margin-left:-502px;
+        font-family:'Raleway',sans-serif
+    }
+    #form {
+        max-width:1350px;
+        min-width:750px;
+        padding:10px;
+        border:2px solid gray;
+        border-radius:10px;
+        font-family: 'Raleway', sans-serif;
+        background-color:#fff
+    }
+    #form img{
+        float: right;
+        margin: 0;
+        height: 100px;
+        width:100px;
+    }
+    #abc{
+        display: none;
+    }
+    iframe{
+        height: 450px;
+        width: 800px;
+    }
+}
