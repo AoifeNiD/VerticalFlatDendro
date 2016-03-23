@@ -1,45 +1,43 @@
 {
   "name": "My Space Profile",
-  "icon": "images/circleheart.png",
-  "icon2": "images/circle_plus.png",
+  "icon": "images/circle_plus.svg",
   "level": "red",
   "children": [
     {
       "name":  "Extraterrestrial Life",
-      "icon": "images/circleheart.png",
-      "icon2": "images/circle_plus.png",
+      "icon2": "images/circle_plus.svg",
       "level": "red",
       "url": "https://en.wikipedia.org/wiki/Extraterrestrial_life",
       "children": [
         {"name":"Astrobiology",
-          "icon": "images/circleheart.png",
+          "icon": "images/square.svg",
           "level": "red",
           "url":  "https://en.wikipedia.org/wiki/Astrobiology"},
         {
           "name":"Extraterrestrial Beings",
           "url": "https://en.wikipedia.org/wiki/List_of_alleged_extraterrestrial_beings",
-          "icon": "images/circleheart.png",
-          "icon2": "images/circle_plus.png",
+          "icon": "images/square.svg",
+          "icon2": "images/circle_plus.svg",
           "level": "red",
           "children": [
             {"name": "Grey Aliens",
-              "icon": "images/circleheart.png",
+              "icon": "images/square.svg",
               "level": "red",
               "url": "https://en.wikipedia.org/wiki/Grey_alien"},
             {"name": "Nordic Aliens",
-              "icon": "images/circleheart.png",
+              "icon": "images/square.svg",
               "level": "red",
               "url": "https://en.wikipedia.org/wiki/Plejaren"},
             {"name": "Anunnaki",
-              "icon": "images/circleheart.png",
+              "icon": "images/square.svg",
               "level": "red",
               "url": "https://en.wikipedia.org/wiki/Anunnaki"},
             {"name": "Reptilians",
-              "icon": "images/circleheart.png",
+              "icon": "images/square.svg",
               "level": "red",
               "url": "https://en.wikipedia.org/wiki/Reptilians"},
             {"name": "Little Green Men",
-              "icon": "images/circleheart.png",
+              "icon": "images/square.svg",
               "level": "red",
               "url": "https://en.wikipedia.org/wiki/Little_green_men"}
           ]
@@ -48,7 +46,7 @@
     },{
       "name": "Solar System",
       "icon": "images/square.svg",
-      "icon2": "images/circle_plus.png",
+      "icon2": "images/circle_plus.svg",
       "level": "blue",
       "url": "https://en.wikipedia.org/wiki/Solar_System",
       "children": [
@@ -56,7 +54,7 @@
           "name": "Terrestrial Planets",
           "url": "https://en.wikipedia.org/wiki/Planet",
           "icon": "images/square.svg",
-          "icon2": "images/circle_plus.png",
+          "icon2": "images/circle_plus.svg",
           "level": "blue",
           "children": [
             {"name": "Mercury",
@@ -66,7 +64,7 @@
             },{
               "name": "Venus",
               "icon": "images/square.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "blue",
               "url": "https://en.wikipedia.org/wiki/Venus",
               "children": [
@@ -78,7 +76,7 @@
             },{
               "name": "Earth",
               "icon": "images/square.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "blue",
               "url": "https://en.wikipedia.org/wiki/Earth",
               "children": [
@@ -90,7 +88,7 @@
             },{
               "name": "Mars",
               "icon": "images/square.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "blue",
               "url": "https://de.wikipedia.org/wiki/Mars_(Planet)",
               "children": [
@@ -104,13 +102,13 @@
         },
         {"name": "Giant Planets",
           "icon": "images/square.svg",
-          "icon2": "images/circle_plus.png",
+          "icon2": "images/circle_plus.svg",
           "level": "green",
           "url": "https://en.wikipedia.org/wiki/Giant_planet",
           "children": [
             {"name": "Gas Giants",
               "icon": "images/square.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "green",
               "url": "https://en.wikipedia.org/wiki/Gas_giant",
               "children": [
@@ -126,7 +124,7 @@
             },
             {"name": "Ice Giants",
               "icon": "images/square.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "green",
               "url": "https://en.wikipedia.org/wiki/Ice_giant",
               "children": [
@@ -146,19 +144,19 @@
     },{
       "name": "Universe",
       "icon": "images/star.svg",
-      "icon2": "images/circle_plus.png",
+      "icon2": "images/circle_plus.svg",
       "level": "orange",
       "url": "https://en.wikipedia.org/wiki/Universe",
       "children": [
         {"name": "Chronology",
           "icon": "images/star.svg",
-          "icon2": "images/circle_plus.png",
+          "icon2": "images/circle_plus.svg",
           "level": "orange",
           "url": "https://en.wikipedia.org/wiki/Chronology_of_the_universe",
           "children": [
             {"name": "The Big Bang",
               "icon": "images/star.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "orange",
               "url": "https://en.wikipedia.org/wiki/Big_Bang",
               "children": [
@@ -176,7 +174,7 @@
             },
             {"name": "Creation Myth",
               "icon": "images/star.svg",
-              "icon2": "images/circle_plus.png",
+              "icon2": "images/circle_plus.svg",
               "level": "orange",
               "url": "https://en.wikipedia.org/wiki/Creation_myth",
               "children": [
@@ -206,36 +204,36 @@
         },
         {"name": "Components",
           "icon": "images/star.svg",
-          "icon2": "images/circle_plus.png",
+          "icon2": "images/circle_plus.svg",
           "level": "yellow",
           "url": "https://en.wikipedia.org/wiki/Universe#Contents",
           "children": [
             {"name": "Dark Energy",
-              "icon": "images/star.svg",
+              "icon": "images/square.svg",
               "level": "yellow",
               "url": "https://en.wikipedia.org/wiki/Dark_energy"},
             {"name": "Ordinary Matter",
-              "icon": "images/star.svg",
-              "icon2": "images/circle_plus.png",
+              "icon": "images/square.svg",
+              "icon2": "images/circle_plus.svg",
               "level": "yellow",
               "url": "https://en.wikipedia.org/wiki/Matter",
               "children": [
                 {"name": "Particles",
-                  "icon": "images/star.svg",
-                  "icon2": "images/circle_plus.png",
+                  "icon": "images/square.svg",
+                  "icon2": "images/circle_plus.svg",
                   "level": "yellow",
                   "url": "https://en.wikipedia.org/wiki/Particle_physics",
                   "children": [
                     {"name": "Hadrons",
-                      "icon": "images/star.svg",
+                      "icon": "images/square.svg",
                       "level": "magenta",
                       "url": "https://en.wikipedia.org/wiki/Hadron"},
                     {"name": "Leptons",
-                      "icon": "images/star.svg",
+                      "icon": "images/square.svg",
                       "level": "magenta",
                       "url": "https://en.wikipedia.org/wiki/Lepton"},
                     {"name": "Photons",
-                      "icon": "images/star.svg",
+                      "icon": "images/square.svg",
                       "level": "magenta",
                       "url": "https://en.wikipedia.org/wiki/Photon_epoch"}
                   ]
@@ -243,7 +241,7 @@
               ]
             },
             {"name": "Dark Matter",
-              "icon": "images/star.svg",
+              "icon": "images/square.svg",
               "level": "yellow",
               "url": "https://en.wikipedia.org/wiki/Dark_matter"}
           ]}

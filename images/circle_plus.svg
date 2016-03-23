@@ -3,15 +3,21 @@
     <style>
       .cls-1 {
         fill: #363636;
+        stroke-width: 23.792px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #363636;
       }
 
       .cls-2 {
         fill: none;
-        stroke: #363636;
         stroke-width: 276.917px;
       }
     </style>
   </defs>
-  <rect class="cls-1" x="946" y="1026" width="1752" height="1572"/>
+  <path class="cls-1" d="M1652,682h300V2946H1652V682Z"/>
+  <path id="Shape_1_copy" data-name="Shape 1 copy" class="cls-1" d="M670.032,1964.24l-0.064-300,2264-.48,0.06,300Z"/>
   <ellipse class="cls-2" cx="1802" cy="1830" rx="1696" ry="1648"/>
 </svg>
