@@ -143,30 +143,30 @@
       ]
     },{
       "name": "Universe",
-      "icon": "images/star.svg",
+      "icon": "images/square.svg",
       "icon2": "images/circle_plus.svg",
       "level": "orange",
       "url": "https://en.wikipedia.org/wiki/Universe",
       "children": [
         {"name": "Chronology",
-          "icon": "images/star.svg",
+          "icon": "images/square.svg",
           "icon2": "images/circle_plus.svg",
           "level": "orange",
           "url": "https://en.wikipedia.org/wiki/Chronology_of_the_universe",
           "children": [
             {"name": "The Big Bang",
-              "icon": "images/star.svg",
+              "icon": "images/square.svg",
               "icon2": "images/circle_plus.svg",
               "level": "orange",
               "url": "https://en.wikipedia.org/wiki/Big_Bang",
               "children": [
                 {"name": "Singularity",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Gravitational_singularity"
                 },
                 {"name": "Infinity",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Infinity"
                 }
@@ -179,23 +179,23 @@
               "url": "https://en.wikipedia.org/wiki/Creation_myth",
               "children": [
                 {"name": "Ex nihilo",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Ex_nihilo"},
                 {"name": "Creation from Chaos",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Chaos_(cosmogony)"},
                 {"name": "World Parent",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Mother_goddess#Earth_Mother"},
                 {"name": "Emergence",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Metamorphosis"},
                 {"name": "Earth Diver",
-                  "icon": "images/star.svg",
+                  "icon": "images/square.svg",
                   "level": "orange",
                   "url": "https://en.wikipedia.org/wiki/Mythologies_of_the_indigenous_peoples_of_the_Americas"}
               ]

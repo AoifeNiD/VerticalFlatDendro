@@ -31,7 +31,7 @@
     <script>
         //you can set the margins, width and height of the canvas below
 
-        var margin = {top: 120, right: 5, bottom: 20, left: 50},
+        var margin = {top: 125, right: 5, bottom: 20, left: 59},
                 width = 1270 - margin.right - margin.left,
                 height = 1000 - margin.top - margin.bottom;
         var i = 0,
@@ -87,7 +87,7 @@
                     links = tree.links(nodes);
 
 // Fixed-depth or length of branches can be changed in brackets below
-            nodes.forEach(function(d) { d.y = d.depth * 140; });
+            nodes.forEach(function(d) { d.y = d.depth * 130; });
 
 
 // Update the nodes…DO NOT CHANGE
@@ -137,8 +137,8 @@
 
                     .attr("x", function(d) { return  -140; })
                     .attr("y", function(d) { return -23; })
-                    .attr("transform", "rotate(45)")
-                    .attr("fill", "rgba(255, 255, 255, 0.9")
+                    .attr("transform", "rotate(40)")
+                    .attr("fill", "rgba(255, 255, 255, 0.95")
 
                     .attr("rx", "5")
                     .attr ("ry", "5");
@@ -155,7 +155,7 @@
 
                     .attr("x", function(d) { return  -138; })
                     .attr("y", function(d) { return  -13; })
-                    .attr("transform", "rotate(45)")
+                    .attr("transform", "rotate(40)")
 
                 /////////////////////////////////////////
                     .attr("dy", ".2em") //sets the text size
